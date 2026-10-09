@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CEO Dashboard — Letter Tracker</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="/icon/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <header class="topbar">
+    <h1>👔 CEO Dashboard</h1>
+    <span class="badge">Role: CEO</span>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>Letters On Your Desk</h2>
+      <div class="search-container">
+          <form>
+            <input type="text" placeholder="Search Letters.." name="search">
+          </form>
+      </div>
+      <div id="letter_View" class="ceo-queue">
+        <!-- view -->
+    </section>
+
+    <section class="card">
+      <h2>Notification Feed</h2>
+      <p class="muted">Live (polls every few seconds).</p>
+      <div id="notif-feed"></div>
+    </section>
+  </main>
+
+  <div id="ceo_replay" class="overlay-container">
+        <div class="popup-box">
+          <h2>Set Appointment Date</h2>
+            <form class="form-container">
+                <label class="form-label" for="name">Appointment Date:</label>
+                <input class="form-input" type="date" placeholder="Enter Your Username" id="appointment_date" required>
+                <label class="form-label" for="name">Appointment Venue:</label>
+                <select id="venue">
+                  <option value="">Select Appointment Venue</option>
+                  <option value="Office">Office</option>
+                  <option value="Resturant">Resturant</option>
+                  <option value="Cafe">Cafe</option>
+                </select>
+                <button class="btn-submit" type="submit">Set Appointment</button>
+            </form>
+            <button class="btn-close-popup" onclick="">Close</button>
+        </div>
+    </div>
+
+    <div id="ceo_replay_msg" class="overlay-container">
+        <div class="popup-box">
+          <h2>Reply To the Letter</h2>
+            <form class="form-container">
+                <label class="form-label" for="name">Type Here:</label>
+                <textarea  id="reply_msg" rows="6"></textarea>
+                <button class="btn-submit" type="submit">Submit Reply</button>
+            </form>
+            <button class="btn-close-popup" onclick="">Close</button>
+        </div>
+    </div>
+
+  <script src="/js/ceo.js"></script>
+</body>
+</html>

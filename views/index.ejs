@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letter Tracker</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="/icon/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <main class="container hero">
+    <h1><img src="/icon/favicon.png" style="width: 45px; height: 40px;" /> Letter Tracker</h1>
+    <p class="muted">Track your letter from submission to reply.</p>
+
+    <form id="track_form" class="card">
+      <label>Enter your Serial Number (SN)</label>
+      <input id="sn" placeholder="LTR-20250101-ABC12" required />
+      <button type="submit" id="trackBtn">Track Letter</button>
+    </form>
+
+
+    <div id="trackLetter" class="overlay-container">
+        <div class="popup-box">
+          <h3>Track Letter Events</h3>
+          <div id="load_event">
+            <!-- event -->
+          </div>      
+          <button id="closebtn" class="btn-close-popup" onclick="close();">Close</button>
+        </div>
+    </div>
+
+    <nav class="links">
+      <a href="/clerk">Clerk Dashboard</a>
+      <a href="/pa">Personal Assitant Dashboard</a>
+      <a href="/ceo">Admin Dashboard</a>
+    </nav>
+  </main>
+
+
+
+  <script src="/js/track.js"></script>
+</body>
+</html>

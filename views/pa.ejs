@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PA Dashboard — Letter Tracker</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="/icon/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <header class="topbar">
+    <h1>📥 PA Dashboard</h1>
+    <span class="badge">Role: PA</span>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>New Letters Awaiting Action</h2>
+      <div class="search-container">
+          <form>
+            <input type="text" placeholder="Search Letters.." name="search">
+          </form>
+      </div>
+      <div id="letter_View" class="pa-queue">
+        <!-- letter view -->
+      </div>
+
+
+    </section>
+
+    <section class="card">
+      <h2>Already Acknowledged Letters</h2>
+      <p class="muted">Forward them to the CEO.</p>
+      <div id="notif-feed">
+
+      <div id="letter_acknowleged" class="pa-queue">
+        <!-- view -->
+      </div>
+      
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/pa.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clerk Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="/icon/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <header class="topbar">
+    <h1>🗂️ Clerk Dashboard</h1>
+    <span class="badge">Role: CLERK</span>
+  </header>
+
+  <main class="container grid">
+    <!-- Submit new letter -->
+    <section class="card">
+      <h2>Register New Letter</h2>
+      <form id="submit_form">
+        <label>Letter Serial Number</label>
+        <input id="sn" placeholder="Enter Serial number" required />
+        <label>Sender Name</label>
+        <input id="owner_name" placeholder="Enter Sender Name" required />
+        <label>Sender Phone</label>
+        <input id="owner_phone" placeholder="Enter Sender Telephone" />
+        <label>Sender Email</label>
+        <input type="email" id="owner_email" placeholder="Enter Sender Email" />
+        <label>Sender National ID</label>
+        <input id="owner_nin" type="text" placeholder="Enter Sender National ID"  required/>
+        <label>Subject</label>
+        <input id="subject" placeholder="Enter Subject"  required/>
+        <label>Priority</label>
+        <select id="Priority">
+          <option value="">Select Letter Priority</option>
+          <option value="Urgent">Urgent</option>
+          <option value="Minor">Minor</option>
+          <option value="Normal">Normal</option>
+        </select>
+        <button type="submit" id="submitBtn">Register Letter</button>
+      </form>
+      <div id="submit-result" class="result"></div>
+    </section>
+
+    <!-- Clerk queue: letters returned to clerk for pickup -->
+    <section class="card">
+      <h2>Clerk Queue</h2>
+      <p class="muted">Letters ready for owner pickup.</p>
+      <div id="clerk-queue"></div>
+    </section>
+  </main>
+
+  <div id="popupOverlay" class="overlay-container">
+        <div class="popup-box">
+          <div id="letter_details">
+            <!-- apip data -->
+          </div>
+        </div>
+    </div>
+
+
+  <script src="/js/clerk.js"></script>
+</body>
+</html>
